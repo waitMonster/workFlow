@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       default-lazy-init="true" xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+    <bean id="restServiceProxyFactory" class="com.facishare.rest.proxy.RestServiceProxyFactory"
+          p:configName="fs-workflow-rest-proxy-config" init-method="init"/>
+
+    <bean id="paasWorkflow" class="com.facishare.rest.proxy.RestServiceProxyFactoryBean">
+        <property name="type" value="com.facishare.workflow.remote.PaasWorkflowResource" />
+        <property name="factory" ref="restServiceProxyFactory" />
+    </bean>
+
+    <bean id="paasMetadata" class="com.facishare.rest.proxy.RestServiceProxyFactoryBean">
+        <property name="type" value="com.facishare.workflow.remote.PaasMetadataResource" />
+        <property name="factory" ref="restServiceProxyFactory" />
+    </bean>
+
+
+</beans>

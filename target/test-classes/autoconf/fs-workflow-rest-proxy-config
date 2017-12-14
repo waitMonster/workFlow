@@ -1,0 +1,14 @@
+{
+  "PaasWorkflow": {
+    "address":"10.113.32.47:8002/fs-paas-workflow",
+    "serviceName":" 工作流引擎",
+    "socketTimeOut": 10000,
+    "connectionTimeOut": 2000
+  },
+  "PaasMetadata": {
+     "address": "10.113.32.46:8010/crmrest",
+     "serviceName":"元数据平台",
+     "socketTimeOut": 0,
+     "connectionTimeOut": 2000
+    }
+}

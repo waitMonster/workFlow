@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.facishare:fs-rest-proxy:1.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/facishare/fs-rest-proxy/1.2-SNAPSHOT/fs-rest-proxy-1.2-20170822.070730-30.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/facishare/fs-rest-proxy/1.2-SNAPSHOT/fs-rest-proxy-1.2-20170822.070730-30-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/facishare/fs-rest-proxy/1.2-SNAPSHOT/fs-rest-proxy-1.2-20170822.070730-30-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

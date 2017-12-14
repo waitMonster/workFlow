@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.fxiaoke.pms:ping-monitor-api:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/fxiaoke/pms/ping-monitor-api/1.0.0-SNAPSHOT/ping-monitor-api-1.0.0-20171115.094050-8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/fxiaoke/pms/ping-monitor-api/1.0.0-SNAPSHOT/ping-monitor-api-1.0.0-20171115.094050-8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/fxiaoke/pms/ping-monitor-api/1.0.0-SNAPSHOT/ping-monitor-api-1.0.0-20171115.094050-8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

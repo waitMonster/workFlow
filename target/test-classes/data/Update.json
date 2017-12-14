@@ -1,0 +1,191 @@
+{
+  "id": "5982c1c1319d19c3383416be",
+  "name": "我的名称1",
+  "description": "我的描述",
+  "sourceWorkflowId": "wf-005",
+  "entityId": "AccountObj",
+  "entityName": "客户",
+  "triggerTypes": [
+    1
+  ],
+  "workflow": {
+    "activities": [
+      {
+        "id": "st1",
+        "type": "startEvent"
+      },
+      {
+        "id": "g1",
+        "name": "网关1",
+        "description": "",
+        "defaultTransitionId": "line6",
+        "type": "exclusiveGateway"
+      },
+      {
+        "id": "e1",
+        "name": "立即执行的活动",
+        "description": "",
+        "type": "executionTask",
+        "itemList": [
+          {
+            "taskType": "send_qixin",
+            "sender": 2003,
+            "recipients": {
+              "person": [
+                "2003"
+              ]
+            },
+            "title": "sdf",
+            "content": "sdf"
+          }
+        ]
+      },
+      {
+        "type": "endEvent",
+        "id": "end2"
+      },
+      {
+        "id": "g2",
+        "name": "网关2",
+        "description": "",
+        "defaultTransitionId": "line7",
+        "type": "exclusiveGateway"
+      },
+      {
+        "id": "e2",
+        "name": "立即执行的活动",
+        "description": "",
+        "type": "executionTask",
+        "itemList": [
+          {
+            "taskType": "send_email",
+            "sender": "aa@aa.fom",
+            "template":"fsdfds",
+            "recipients": {
+              "person": [
+                "2003"
+              ]
+            },
+            "title": "sdf",
+            "content": "sdf"
+          },
+          {
+            "taskType": "send_qixin",
+            "sender": 2003,
+            "recipients": {
+              "person": [
+                "2003"
+              ]
+            },
+            "title": "sdf",
+            "content": "sdf"
+          }
+        ]
+      },
+      {
+        "type": "endEvent",
+        "id": "end1"
+      },
+      {
+        "type": "endEvent",
+        "id": "end3"
+      }
+    ],
+    "variables": [
+      {
+        "id": "AccountObj##name",
+        "type": {
+          "name": "text"
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "id": "line1",
+        "fromId": "st1",
+        "toId": "g1",
+        "serialNumber": 0
+      },
+      {
+        "id": "line2",
+        "fromId": "g1",
+        "toId": "e1",
+        "condition": {
+          "type": "or",
+          "conditions": [
+            {
+              "type": "and",
+              "conditions": [
+                {
+                  "left": {
+                    "expression": "AccountObj##name"
+                  },
+                  "type": "equals",
+                  "right": {
+                    "type": {
+                      "name": "text"
+                    },
+                    "value": "address"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "serialNumber": 0
+      },
+      {
+        "id": "line3",
+        "fromId": "e1",
+        "toId": "end2",
+        "serialNumber": 0
+      },
+      {
+        "id": "line6",
+        "fromId": "g1",
+        "toId": "g2",
+        "serialNumber": 0
+      },
+      {
+        "id": "line4",
+        "fromId": "g2",
+        "toId": "e2",
+        "condition": {
+          "type": "or",
+          "conditions": [
+            {
+              "type": "and",
+              "conditions": [
+                {
+                  "left": {
+                    "expression": "AccountObj##name"
+                  },
+                  "type": "equals",
+                  "right": {
+                    "type": {
+                      "name": "text"
+                    },
+                    "value": "address333"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "serialNumber": 0
+      },
+      {
+        "id": "line5",
+        "fromId": "e2",
+        "toId": "end3",
+        "serialNumber": 0
+      },
+      {
+        "id": "line7",
+        "fromId": "g2",
+        "toId": "end1",
+        "serialNumber": 0
+      }
+    ]
+  }
+}

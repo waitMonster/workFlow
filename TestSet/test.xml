@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="5">
+    <parameter name="TestEnv" value="ceshi112" />
+    <!--<parameter name="TestEnv" value=${TestEnv} /-->
+    <test verbose="2" preserve-order="true" name="TestDebug">
+
+    <packages>
+    <!--<package name = "com.facishare.openapi.workflow.GetApiNameTest"/>-->
+    </packages>
+    <classes>
+        <class name = "com.facishare.openapi.workflow.GetApiNameTest" />
+    </classes>
+
+</test> <!-- Test -->
+</suite> <!-- Suite -->
